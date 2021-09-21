@@ -1,0 +1,148 @@
+    // Tablets
+    @media(max-width:800px) {
+        #home-b .container,
+        #home-d .container {
+            grid-template-columns: 1fr !important;
+        }
+        // Daily menu
+        #daily_menu {
+            .container {
+                .menu {
+                    padding: 0 5rem;
+                }
+            }
+        }
+        #food-a {
+            height: 20vh;
+        }
+        .food-b {
+            padding: 2rem;
+            .grid {
+                align-items: center;
+            }
+        }
+        .d-none {
+            display: none;
+        }
+        #food {
+            &-c,
+            &-d,
+            &-e,
+            &-f,
+            &-g,
+            &-h,
+            &-i,
+            &-j,
+            &-k,
+            &-l,
+            &-m,
+            &-n,
+            &-o,
+            &-p,
+            &-q,
+            &-r {
+                .item .text-color {
+                    padding-top: 1rem;
+                }
+                margin: 1rem;
+                padding: 1rem;
+                .cont h2 {
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+    
+    // Mobile
+    @media(max-width:500px) {
+        #header-home {
+            .main-nav img {
+                display: none;
+            }
+        }
+        #home-c {
+            .menus {
+                grid-template-columns: 1fr;
+                grid-gap: 0;
+            }
+        }
+        #home-d {
+            .images img {
+                width: 75% !important;
+            }
+        }
+        // Daily menu
+        #daily_menu {
+            .container {
+                .menu {
+                    padding: 0rem;
+                    text-align: center;
+                }
+            }
+        }
+        // Food
+        .d-none {
+            display: none;
+        }
+        .food-b .grid {
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+        .food-b .d-none {
+            display: none;
+        }
+        .footer {
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        #food {
+            &-c,
+            &-d,
+            &-e,
+            &-f,
+            &-g,
+            &-h,
+            &-i,
+            &-j,
+            &-k,
+            &-l,
+            &-m,
+            &-n,
+            &-o,
+            &-p,
+            &-q,
+            &-r {
+                margin: 1rem 0;
+                padding: .5rem 0;
+                .cont h2 {
+                    margin-top: 0rem !important;
+                    padding: 0 0.5rem !important;
+                }
+                .item2 {
+                    flex-direction: column !important;
+                    margin: 0rem;
+                    padding: 0.5rem;
+                    .item-b {
+                        padding-top: 1rem;
+                    }
+                }
+                .item {
+                    flex-direction: column;
+                    margin: 0.5rem;
+                }
+            }
+        }
+        // Wine
+        .food-b {
+            .grid-wine {
+                display: grid;
+                grid-template-columns: 1fr;
+            }
+        }
+        // Contact
+        #contact-b .container {
+            grid-template-columns: 1fr;
+            padding: 1rem;
+        }
+    }

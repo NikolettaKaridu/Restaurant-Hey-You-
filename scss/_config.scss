@@ -1,0 +1,106 @@
+    $dark-color:#0b0909;
+    $light-color:#d6d6d6;
+    $medium-color:#8c8c8c;
+    $gold-color:#44444c;
+    $max-width: 1280px;
+    $bg-img: url('/Restaurant/dist/img/home/logo.jpg');
+    .py {
+        &-1 {
+            padding: 1rem 0rem;
+        }
+        &-2 {
+            padding: 2rem 0rem;
+        }
+        &-3 {
+            padding: 0 1rem;
+        }
+        &-4 {
+            padding: 0 2rem;
+        }
+    }
+    
+    .my {
+        &-1 {
+            margin: 2rem 0rem;
+        }
+        &-2 {
+            margin: 4rem 0rem;
+        }
+        &-3 {
+            margin: 6rem 0rem;
+        }
+        &-4 {
+            margin: 8rem 0rem;
+        }
+    }
+    
+    .bottom-line {
+        height: 2px;
+        width: 10rem;
+        background: $medium-color;
+        display: block;
+        margin: 0 auto 1rem auto;
+    }
+    
+    .bottom-line2 {
+        height: 2px;
+        width: 5rem;
+        background: $light-color;
+        display: inline-block;
+        margin: 1 auto 0rem auto;
+    }
+    
+    .current {
+        color: $medium-color;
+    }
+    
+    .bold {
+        font-weight: bold;
+    }
+    
+    .italic {
+        font-style: italic;
+    }
+    
+    .underline {
+        text-decoration: underline;
+    }
+    
+    input {
+        width: 250px;
+        height: 40px;
+        padding: 1rem;
+        margin: 0.5rem;
+        border-style: solid 1px $dark-color;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 1.1rem;
+        &:focus {
+            outline: none;
+        }
+    }
+    
+    .message {
+        &:focus {
+            outline: none;
+        }
+        font-family: 'Times New Roman',
+        Times,
+        serif;
+        color: #606060;
+    }
+    
+    .btn {
+        display: block;
+        text-align: center;
+        padding: .5rem 1rem;
+        margin: 1rem;
+        width: 150px;
+        height: 40px;
+        font-size: 1.1rem;
+        font-family: 'Times New Roman', Times, serif;
+        &:hover {
+            background: $medium-color;
+            font-size: 1.2rem;
+            border-radius: 5px;
+        }
+    }

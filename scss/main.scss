@@ -1,0 +1,342 @@
+@import'config';
+@import'food';
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-color {
+    color: $medium-color;
+}
+
+.container {
+    max-width: $max-width;
+    padding: 0 1.5rem;
+    margin: auto;
+    overflow: hidden;
+}
+
+img {
+    width: 100%;
+}
+
+h1 {
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 4rem;
+    font-style: italic;
+    color: $medium-color;
+}
+
+p {
+    font-size: 1.7rem;
+    text-align: center;
+    line-height: 1.6;
+}
+
+a {
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: $light-color;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+// Header / Navigation bar
+#header-home {
+    background: $dark-color;
+    padding: 1rem;
+    color: $light-color;
+    .main-nav {
+        display: flex;
+        justify-content: space-between;
+        img {
+            width: 70px;
+            height: 70px;
+            border-radius: 5px;
+        }
+        #nav-menu {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-end;
+            li {
+                padding: 2rem 1rem 1rem 1rem;
+                color: $light-color;
+                a:hover {
+                    color: $medium-color;
+                }
+                &:hover ul {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+#food-menu {
+    display: none;
+    position: absolute;
+    width: 180px;
+    margin-top: .5rem;
+    text-align: center;
+    z-index: 2;
+    li {
+        display: block;
+        cursor: pointer;
+        background: $dark-color;
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: $light-color;
+        a {
+            color: $light-color;
+            &:hover {
+                color: $medium-color;
+            }
+        }
+    }
+}
+
+#home {
+    &-a {
+        max-width: 2000px;
+        .welcome {
+            background: url('/Restaurant/dist/img/home/home-1.jpg') no-repeat center center / cover;
+            width: 100vw;
+            height: 50vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+            color: $light-color;
+            h2 {
+                padding-top: 1.5rem;
+            }
+            .animation {
+                height: 150px;
+                width: 100vw;
+                opacity: 0;
+                background: $dark-color;
+                border-top: 4px $medium-color solid;
+                animation: animate1 2s forwards 1s ease-in;
+                @keyframes animate1 {
+                    from {
+                        opacity: 0;
+                    }
+                    to {
+                        opacity: 0.9;
+                    }
+                }
+            }
+        }
+    }
+    &-b {
+        .container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 2rem;
+            padding: 3rem 0;
+            align-items: center;
+            .about {
+                &-b {
+                    text-align: center;
+                    img {
+                        width: 75%;
+                    }
+                }
+                &-a {
+                    h1 {
+                        font-size: 3.5rem;
+                    }
+                    p {
+                        padding: 0 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+    &-c {
+        background: $dark-color;
+        .menus {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-gap: 1rem;
+            text-align: center;
+            li i,
+            a[class] {
+                color: $medium-color;
+            }
+            a {
+                color: #fff;
+            }
+            li {
+                padding-top: 2rem;
+            }
+        }
+    }
+    &-d {
+        .container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 2rem;
+            padding: 3rem 0;
+            align-items: center;
+            .images {
+                img {
+                    width: 35%;
+                    padding: .5rem;
+                }
+            }
+            .new-rest {
+                p {
+                    padding-bottom: 4rem;
+                }
+                a {
+                    color: $medium-color;
+                }
+            }
+        }
+    }
+}
+
+// Daily Menu
+#daily_menu {
+    .container {
+        h1 {
+            text-align: center;
+            padding: 3rem 0;
+        }
+        .menu {
+            padding: 0 10rem;
+            li {
+                font-size: 1.6rem;
+                padding-bottom: 0.6rem;
+                &:last-child {
+                    padding-bottom: 3rem;
+                }
+            }
+        }
+    }
+}
+
+// Contact
+#contact {
+    &-a {
+        background: $medium-color;
+        opacity: 0.8;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        .cont {
+            width: 100vw;
+            height: 30vh;
+            padding: 6rem 0;
+            h2 {
+                font-size: 5rem;
+                padding-bottom: 1rem;
+                color: $gold-color;
+            }
+            h1 {
+                font-size: 2.5rem;
+            }
+        }
+    }
+    &-b {
+        .container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 2rem;
+            font-size: 1.6rem;
+            line-height: 1.6;
+            padding: 2rem;
+            .form {
+                display: grid;
+                grid-template-areas: 'form-header form-header' 'name email' 'phone number' 'date time' 'message message';
+                input {
+                    color: #606060;
+                }
+                .form-header {
+                    grid-area: form-header;
+                }
+                .name {
+                    grid-area: name;
+                }
+                .email {
+                    grid-area: email;
+                }
+                .phone {
+                    grid-area: phone;
+                }
+                .number {
+                    grid-area: number;
+                }
+                .date {
+                    grid-area: date;
+                    color: rgb(161, 161, 159);
+                }
+                .time {
+                    grid-area: time;
+                }
+                .message {
+                    grid-area: message;
+                    width: 84%;
+                    height: 10vh;
+                    font-size: 1.2rem;
+                    padding: 1rem;
+                    margin: .5rem;
+                }
+            }
+        }
+    }
+}
+
+// Footer
+.footer {
+    color: #000;
+    background: $dark-color;
+    position: relative;
+    color: $light-color;
+    &::before {
+        content: '';
+        background: url('/Restaurant/dist/img/home/footer.jpg') no-repeat center center / cover;
+        width: 100%;
+        height: 100%;
+        opacity: 0.4;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        padding: 3rem 0;
+        li {
+            padding: 1rem 0;
+            font-size: 1.5rem;
+        }
+        .address,
+        .hours,
+        .contact {
+            z-index: 2;
+        }
+    }
+    .container p {
+        font-size: 1.5rem;
+        padding: 2rem 0;
+    }
+}
+
+@import'media';
